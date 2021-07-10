@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <article>
+    <h1>{{ .Title }} - <i>{{ .Description }}</i></h1>
+    <b>{{ .PublishDate }}</b>
+    <p>{{ .Content }}</p>
+    <ul class="posts-list">
+      {{ range where .Paginator.Pages "Type" "!=" "page" }}
+        <li class="posts-list-item">
+          <a class="posts-list-item-title" href="{{ .Permalink }}">{{ .Title }}</a>
+          <span class="posts-list-item-description">
+            {{ .Description }}
+          </span>
+          <span class="posts-list-item-description">
+            {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+            {{ .PublishDate.Format "Jan 2, 2006" }}
+          </span>
+        </li>
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" $ }}
+  </article>
+{{ end }}

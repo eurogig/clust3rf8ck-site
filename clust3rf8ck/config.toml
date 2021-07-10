@@ -1,0 +1,61 @@
+baseURL = "https://clusterf8ck.com/"
+languageCode = "en-us"
+title = "This is: Clust3rF8ck"
+theme = "m10c"
+
+[Params]
+  author = "Clust3rF8ck on Twitch and YouTube with Steve Giguere and Michael Foster"
+  description = "A video newsletter for an impatient world. Curated content on all things cloud native, kubernetes, cybersecurity and automation. Hosted by Michael Foster (Red Hat) and Steve Giguere (Bridgecrew)"
+  avatar = "/CFlogo.jpeg"
+  favicon = "/CFlogo.jpeg"
+
+[[Params.social]]
+  icon = "youtube"
+  name = "On YouTube"
+  url = "https://www.youtube.com/channel/UCuj1ByVjn4uagdu4vE82LgA"
+
+[[Params.social]]
+  icon = "twitch"
+  name = "On Twitch"
+  url = "https://twitch.com/clust3rf8ck"
+
+[[Params.social]]
+  icon = "twitter"
+  name = "On Twitter"
+  url = "https://twitter.com/clust3rf8ck"
+
+[[Params.social]]
+  icon = "github"
+  name = "My Github"
+  url = "https://github.com/eurogig"
+
+[Params.style]
+  darkestColor = "#000000"
+  darkColor = "#212121"
+  lightColor = "#f5e3e0"
+  lightestColor = "#f5f5f5"
+  primaryColor = "#00aaff"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "About Steve"
+    name = "About Steve"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "https://stevegiguere.com"
+    weight = -110
+
+  [[menu.main]]
+    identifier = "About Mike"
+    name = "About Mike"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "/michaelfoster"
+    weight = -105
+
+  [[menu.main]]
+    identifier = "Search Tags"
+    name = "Search Tags"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "/tags/"
+    weight = -100
+
