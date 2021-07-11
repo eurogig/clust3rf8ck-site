@@ -21,7 +21,7 @@ spec:
         seccomp.security.alpha.kubernetes.io/pod: "docker/default" 
     spec:
       containers:
-      - image: eurogig/clust3rf8ck@sha256:8cf2906db57df913c5bc59329bc4516eb281f9b82cd4c8ecdae825b6e507c7b3
+      - image: eurogig/clust3rf8ck@sha256:5b5ed44e4bba0702f8a7c94b38a309c6e816d77ff0e50565786f828f56a4d301
         name: clust3rf8ck
         imagePullPolicy: Always
         resources:
