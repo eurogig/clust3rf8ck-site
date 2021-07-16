@@ -21,7 +21,7 @@ spec:
         seccomp.security.alpha.kubernetes.io/pod: "docker/default" 
     spec:
       containers:
-      - image: eurogig/clust3rf8ck@sha256:27e63b549e2a32f7877631c947485e1a3b01b2283df4aa74d8c9af5881601588
+      - image: eurogig/clust3rf8ck@sha256:0ceb3d0b4a79ccc5db5a6b86fc061d2c764018d52c70c10703512525e8851253
         name: clust3rf8ck
         imagePullPolicy: Always
         resources:
@@ -53,6 +53,8 @@ spec:
               - ALL
               - NET_RAW
       automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
 status: {}
 ---
 apiVersion: v1
