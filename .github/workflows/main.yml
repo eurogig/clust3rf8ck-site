@@ -38,11 +38,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
-        name: 'Get tag'
-        id: tag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
-        with:
-          fallback: 'latest' # Optional fallback tag
+        name: Get Tag
+        uses: actions-ecosystem/action-get-latest-tag@v1
+        id: get-latest-tag
       -
         name: Build and push
         id: docker_build
@@ -50,7 +48,7 @@ jobs:
         with:
           file: clust3rf8ck/Dockerfile
           push: true
-          tags: eurogig/clust3rf8ck:${{ steps.previoustag.outputs.tag }}
+          tags: eurogig/clust3rf8ck:${{ steps.get-latest-tag.outputs.tag }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
