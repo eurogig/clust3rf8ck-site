@@ -47,14 +47,27 @@ spec:
           initialDelaySeconds: 10
           periodSeconds: 5
         securityContext:
+          readOnlyRootFilesystem: true
           allowPrivilegeEscalation: false
           capabilities:
             drop:
               - ALL
               - NET_RAW
+        volumeMounts:
+        - mountPath: /var/cache/nginx
+          name: cache-volume
+        - mountPath: /var/run
+          name: pid-volume          
       automountServiceAccountToken: false
       securityContext:
         runAsNonRoot: true
+        runAsUser: 101
+        runAsGroup: 101        
+      volumes:
+      - name: cache-volume
+        emptyDir: {}
+      - name: pid-volume
+        emptyDir: {}
 status: {}
 ---
 apiVersion: v1
