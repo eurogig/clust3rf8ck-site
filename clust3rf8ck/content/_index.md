@@ -1,6 +1,6 @@
 ---
 title: Clust3rF8ck:latest 
-description: EP.24 - CyberSec Jobs, REvil Ransomware, GitHub Copilot Live and more! 
-publishdate: 2021-07-16
+description: EP.25 - K8s Security Map, Virtual Clusters, Headlamp Demo! 
+publishdate: 2021-07-23
 ---
-{{< youtube x6lSRBIdowU >}}
+{{< youtube oIolRE73_Bc >}}
