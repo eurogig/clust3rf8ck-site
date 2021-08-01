@@ -21,7 +21,7 @@ spec:
         seccomp.security.alpha.kubernetes.io/pod: "docker/default" 
     spec:
       containers:
-      - image: eurogig/clust3rf8ck@sha256:416261d24b66dd1d463963b9f799b8ddacc06986c55e13c8f014649d3f13f7d4
+      - image: eurogig/clust3rf8ck@sha256:a374eb5853e0e17d06bcf37afc2fcb40892aa3477caf362ea3581c71373cb90a
         name: clust3rf8ck
         imagePullPolicy: Always
         resources:
@@ -61,8 +61,8 @@ spec:
       automountServiceAccountToken: false
       securityContext:
         runAsNonRoot: true
-        runAsUser: 101
-        runAsGroup: 101        
+        runAsUser: 10014
+        runAsGroup: 10014
       volumes:
       - name: cache-volume
         emptyDir: {}
