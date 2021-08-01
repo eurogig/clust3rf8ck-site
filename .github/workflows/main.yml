@@ -54,7 +54,7 @@ jobs:
         with:
           file: clust3rf8ck/Dockerfile
           push: true
-          tags: eurogig/clust3rf8ck:${{ steps.get-latest-tag.outputs.tag }}
+          tags: eurogig/clust3rf8ck:${{ steps.get-latest-tag.outputs.tag }}, eurogig/clust3rf8ck:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
@@ -73,5 +73,5 @@ jobs:
         name: Commit new Yaml           
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Updated image SHA
+          commit_message: Updated image SHA for ${{ steps.get-latest-tag.outputs.tag }}
           file_pattern: clust3rf8ck/clust3rf8ck.yaml
