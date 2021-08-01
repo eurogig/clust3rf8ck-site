@@ -39,8 +39,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Get Tag
-        uses: actions-ecosystem/action-get-latest-tag@v1
         id: get-latest-tag
+        run: |
+          git fetch --tags -f
+          latest_tag=$(git describe --abbrev=0 --tags)
+          echo "::set-output name=tag::${latest_tag}"
       -
         name: Build and push
         id: docker_build
