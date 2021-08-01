@@ -43,6 +43,8 @@ jobs:
         name: Get Tag
         id: get-latest-tag
         run: |
+          pwd
+          ls
           latest_tag=$(git describe --abbrev=0 --tags)
           echo "::set-output name=tag::${latest_tag}"
       -
