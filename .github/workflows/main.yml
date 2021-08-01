@@ -56,3 +56,13 @@ jobs:
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      - name: Update deployment
+        uses: fjogeleit/yaml-update-action@master
+        with:
+          valueFile: 'clust3rf8ck-site/clust3f8ck.yaml'
+          propertyPath: 'spec.template.spec.containers.image'
+          value: eurogig/clust3rf8ck@${{ steps.docker_build.outputs.digest }}
+          createPR: true
+          branch: deployment
+          targetBranch: main         
+          message: 'Update Image SHA to ${{ steps.docker_build.outputs.digest }}' 
