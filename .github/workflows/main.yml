@@ -68,4 +68,10 @@ jobs:
         name: Check new Yaml        
         id: check-yaml
         run: |
-          cat clust3rf8ck/clust3rf8ck.yaml   
+          cat clust3rf8ck/clust3rf8ck.yaml
+      - 
+        name: Commit new Yaml           
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updated image SHA
+          file_pattern: clust3rf8ck/clust3rf8ck.yaml
