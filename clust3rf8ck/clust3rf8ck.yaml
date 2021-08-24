@@ -20,6 +20,16 @@ spec:
       annotations:
         seccomp.security.alpha.kubernetes.io/pod: "docker/default" 
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - clust3rf8ck
+            topologyKey: "kubernetes.io/hostname"    
       containers:
       - image: eurogig/clust3rf8ck@sha256:a374eb5853e0e17d06bcf37afc2fcb40892aa3477caf362ea3581c71373cb90a
         name: clust3rf8ck
