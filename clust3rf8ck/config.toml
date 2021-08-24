@@ -6,8 +6,8 @@ theme = "m10c"
 [Params]
   author = "Clust3rF8ck on Twitch and YouTube with Steve Giguere and Michael Foster"
   description = "A video newsletter for an impatient world. Curated content on all things cloud native, kubernetes, cybersecurity and automation. Hosted by Michael Foster (Red Hat) and Steve Giguere (Bridgecrew)"
-  avatar = "/CFlogo.jpeg"
-  favicon = "/CFlogo.jpeg"
+  avatar = "/CFlogoV1.jpeg"
+  favicon = "/CFlogoV1.jpeg"
 
 [[Params.social]]
   icon = "youtube"
