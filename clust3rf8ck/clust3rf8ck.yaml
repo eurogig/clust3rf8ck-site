@@ -31,7 +31,7 @@ spec:
                 - clust3rf8ck
             topologyKey: "kubernetes.io/hostname"    
       containers:
-      - image: eurogig/clust3rf8ck@sha256:7542d86223a5268d33b562e14ffd7dc41df91354e047de436790376b425e6299
+      - image: eurogig/clust3rf8ck@sha256:cd17ad93ca8e251b541aa7f70f7cdd4fc362aea136ead71559112bff601ff1ed
         name: clust3rf8ck
         imagePullPolicy: Always
         resources:
