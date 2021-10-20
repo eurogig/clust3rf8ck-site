@@ -1,6 +1,6 @@
 ---
 title: Clust3rF8ck:latest 
-description: EP.1.04 - OWASP Top 10 2021, Golang Monkey, Rancher Live! 
-publishdate: 2021-07-23
+description: EP.1.06 - Kubecon, Facebook Goes Dark, Peirates Live! 
+publishdate: 2021-10-08
 ---
-{{< youtube Gk4X7YfQ_9w >}}
+{{< youtube r0MEKrzrfR4 >}}

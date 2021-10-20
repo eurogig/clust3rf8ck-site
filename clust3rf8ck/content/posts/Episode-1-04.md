@@ -13,7 +13,7 @@ tags:
 - NSA Hardening Guidelines
 - Kubernetes
 - Cloud Native
-slug: episode-1-02
+slug: episode-1-04
 publishDate: 2021-09-02
 ---
 {{< youtube Gk4X7YfQ_9w >}}
