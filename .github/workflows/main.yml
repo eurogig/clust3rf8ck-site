@@ -63,7 +63,7 @@ jobs:
         with:
           find: "- image: eurogig/clust3rf8ck@sha256:[a-f0-9]{64}"
           replace: "- image: eurogig/clust3rf8ck@${{ steps.docker_build.outputs.digest }}"
-          include: "clust3rf8ck.yaml"
+          include: "clust3rf8ck/clust3rf8ck.yaml"
       - 
         name: Check new Yaml        
         id: check-yaml
