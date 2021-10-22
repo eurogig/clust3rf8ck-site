@@ -7,7 +7,7 @@ metadata:
   name: clust3rf8ck
   namespace: clust3rf8ck
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: clust3rf8ck
